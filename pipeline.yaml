@@ -13,7 +13,7 @@ spec:
   strategy:
     type: JenkinsPipeline
     jenkinsPipelineStrategy:
-      jenkinsfile: "node('') {\nstage 'deploy'\nopenshiftDeploy(deploymentConfig: 'welcome')\nopenshiftScale(deploymentConfig: 'welcome',replicaCount: '2')\n}"
+      jenkinsfile: "node {\nstage 'deploy'\nopenshiftDeploy(deploymentConfig: 'welcome')\nopenshiftScale(deploymentConfig: 'welcome',replicaCount: '2')\n}"
   output:
   resources:
   postCommit:
